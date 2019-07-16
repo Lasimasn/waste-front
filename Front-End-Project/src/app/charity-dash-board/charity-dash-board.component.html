@@ -16,38 +16,38 @@
 		 
 
 			<!-- Single Assignment Log -->
-			<div class="w3-card-4" style="margin: 10px">
+			<div class="w3-card-4" style="margin: 10px" *ngFor="let item of charityLogs.logs">
 				<h3 class="w3-light-gray w3-padding">
-					<b>#123AS321</b>
+					<b>#{{item._id}}</b>
 					<button class="w3-btn w3-small w3-yellow w3-round w3-right" >Received</button>
 				</h3>
 			  <div class="row w3-padding" *ngFor="let log of charityLogs.logs">
-         <div class="col-md-3">
+         <div class="col-md-3" *ngFor="let item of charityLogs.logs">
 					 <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Request</span> <span class="w3-text-yellow"> Date</span></h5>
-					 <h6><i class="fa fa-clock w3-text-yellow" aria-hidden="true"></i>&nbsp;{{log.date}}</h6> 
+					 <h6><i class="fa fa-clock w3-text-yellow" aria-hidden="true"></i>&nbsp;{{item.date}}</h6> 
 					 <br/>
 					 <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Recived</span> <span class="w3-text-yellow"> Time</span></h5>
-				   <h6><i class="fa fa-clock w3-text-yellow" aria-hidden="true"></i>&nbsp;{{log.date}}</h6>
+				   <h6><i class="fa fa-clock w3-text-yellow" aria-hidden="true"></i>&nbsp;{{item.date}}</h6>
 				 </div>
-				 <div class="col-md-3 w3-small">
+				 <div class="col-md-3 w3-small" *ngFor="let item of charityLogs.logs">
 						<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Food</span> <span class="w3-text-yellow"> Requested</span></h5>
 						<h6>
 							<img src="../../assets/img/salad.png" height="20px" />&nbsp;&nbsp;Veg+&nbsp;
 							<img src="../../assets/img/turkey.png" height="20px" />&nbsp;&nbsp;Non Veg =&nbsp; 	
 							<img src="../../assets/img/weighing-scale.png" height="20px" />&nbsp;{{charity.foodRequirement}}</h6> 
 							<hr/>
-						<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Food</span> <span class="w3-text-yellow"> Recived</span></h5>
+						<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Food</span> <span class="w3-text-yellow"> Received</span></h5>
 						<h6>
 							<img src="../../assets/img/salad.png" height="20px" />&nbsp;&nbsp;Veg+
 							<img src="../../assets/img/turkey.png" height="20px" />&nbsp;&nbsp;Non Veg =&nbsp; 	
 							<img src="../../assets/img/weighing-scale.png" height="20px" />&nbsp;40</h6> 
 					</div>
-					<div class="col-md-3" *ngFor="let log of charityLogs.logs">
+					<div class="col-md-3" *ngFor="let item of charityLogs.logs">
 							<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Delivery</span> <span class="w3-text-yellow"> Boy</span></h5>
 							<h6>
-								<img src="../../assets/img/scooter.png" height="20px" />&nbsp;&nbsp;{{log.deliveryBoyName}}
+								<img src="../../assets/img/scooter.png" height="20px" />&nbsp;&nbsp;{{item.charityStatus.deliveryBoyName}}
 								<br/>
-								<i class="fa fa-phone w3-text-yellow"></i>&nbsp;&nbsp;{{log.deliveryBoyMobile}}
+								<i class="fa fa-phone w3-text-yellow"></i>&nbsp;&nbsp;{{item.charityStatus.mobile}}
 							</h6>
 					</div>
 					<div class="col-md-3">
@@ -107,18 +107,17 @@
 											</h6>
 									</div>
 									<div class="col-md-3">
-											<h6>Submit Your Review</h6>
+											<h6>Submit Your Rating</h6>
 											<div class="form-group">
-												<img src="../../assets/img/starYellow.png" height="20px" />
-												<img src="../../assets/img/starYellow.png" height="20px" />
-												<img src="../../assets/img/starYellow.png" height="20px" />
-												<img src="../../assets/img/starYellow.png" height="20px" />
-												<img src="../../assets/img/starBlank.png" height="20px" />
+		
+												<div class="rating">
+													<span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+													</div>
 											</div>
-											<div class="form-group">
+											<!-- <div class="form-group">
 												<label>Review</label>
 												<textarea class="form-control"></textarea>
-											</div>
+											</div> -->
 											<div class="form-group">
 												<button class="w3-btn w3-small w3-green w3-round" >Submit</button>
 											</div>
@@ -127,117 +126,7 @@
 							</div>
 							<!-- End Of Assignment Log -->
 
-										<!-- Single Assignment Log -->
-			<div class="w3-card-4" style="margin: 10px">
-					<h3 class="w3-light-gray w3-padding">
-						<b>#123AS321</b>
-						<button class="w3-btn w3-small w3-yellow w3-round w3-right" >Recived</button>
-					</h3>
-					<div class="row w3-padding">
-					 <div class="col-md-3">
-						 <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Request</span> <span class="w3-text-yellow"> Date Time</span></h5>
-						 <h6><i class="fa fa-clock w3-text-yellow" aria-hidden="true"></i>&nbsp;23/06/2019 10:30 PM</h6> 
-						 <br/>
-						 <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Recived</span> <span class="w3-text-yellow"> Date Time</span></h5>
-						 <h6><i class="fa fa-clock w3-text-yellow" aria-hidden="true"></i>&nbsp;23/06/2019 10:30 PM</h6>
-					 </div>
-					 <div class="col-md-3 w3-small">
-							<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Food</span> <span class="w3-text-yellow"> Requested</span></h5>
-							<h6>
-								<img src="../../assets/img/salad.png" height="20px" />&nbsp;&nbsp;Veg+&nbsp;
-								<img src="../../assets/img/turkey.png" height="20px" />&nbsp;&nbsp;Non Veg =&nbsp; 	
-								<img src="../../assets/img/weighing-scale.png" height="20px" />&nbsp;40</h6> 
-								<hr/>
-							<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Food</span> <span class="w3-text-yellow"> Recived</span></h5>
-							<h6>
-								<img src="../../assets/img/salad.png" height="20px" />&nbsp;&nbsp;Veg+
-								<img src="../../assets/img/turkey.png" height="20px" />&nbsp;&nbsp;Non Veg =&nbsp; 	
-								<img src="../../assets/img/weighing-scale.png" height="20px" />&nbsp;40</h6> 
-						</div>
-						<div class="col-md-3">
-								<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Delivery</span> <span class="w3-text-yellow"> Boy</span></h5>
-								<h6>
-									<img src="../../assets/img/scooter.png" height="20px" />&nbsp;&nbsp;Ashutosh Khamari
-									<br/>
-									<i class="fa fa-phone w3-text-yellow"></i>&nbsp;&nbsp;+91-8339829343
-								</h6>
-						</div>
-						<div class="col-md-3">
-								<h6>Submit Your Review</h6>
-								<div class="form-group">
-									<img src="../../assets/img/starYellow.png" height="20px" />
-									<img src="../../assets/img/starYellow.png" height="20px" />
-									<img src="../../assets/img/starYellow.png" height="20px" />
-									<img src="../../assets/img/starYellow.png" height="20px" />
-									<img src="../../assets/img/starBlank.png" height="20px" />
-								</div>
-								<div class="form-group">
-									<label>Review</label>
-									<textarea class="form-control"></textarea>
-								</div>
-								<div class="form-group">
-									<button class="w3-btn w3-small w3-green w3-round" >Submit</button>
-								</div>
-						</div>
-					</div>
-				</div>
-				<!-- End Of Assignment Log -->
-
-							<!-- Single Assignment Log -->
-			<div class="w3-card-4" style="margin: 10px">
-					<h3 class="w3-light-gray w3-padding">
-						<b>#123AS321</b>
-						<button class="w3-btn w3-small w3-yellow w3-round w3-right" >Recived</button>
-					</h3>
-					<div class="row w3-padding">
-					 <div class="col-md-3">
-						 <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Request</span> <span class="w3-text-yellow"> Date Time</span></h5>
-						 <h6><i class="fa fa-clock w3-text-yellow" aria-hidden="true"></i>&nbsp;23/06/2019 10:30 PM</h6> 
-						 <br/>
-						 <h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Recived</span> <span class="w3-text-yellow"> Date Time</span></h5>
-						 <h6><i class="fa fa-clock w3-text-yellow" aria-hidden="true"></i>&nbsp;23/06/2019 10:30 PM</h6>
-					 </div>
-					 <div class="col-md-3 w3-small">
-							<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Food</span> <span class="w3-text-yellow"> Requested</span></h5>
-							<h6>
-								<img src="../../assets/img/salad.png" height="20px" />&nbsp;&nbsp;Veg+&nbsp;
-								<img src="../../assets/img/turkey.png" height="20px" />&nbsp;&nbsp;Non Veg =&nbsp; 	
-								<img src="../../assets/img/weighing-scale.png" height="20px" />&nbsp;40</h6> 
-								<hr/>
-							<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Food</span> <span class="w3-text-yellow"> Recived</span></h5>
-							<h6>
-								<img src="../../assets/img/salad.png" height="20px" />&nbsp;&nbsp;Veg+
-								<img src="../../assets/img/turkey.png" height="20px" />&nbsp;&nbsp;Non Veg =&nbsp; 	
-								<img src="../../assets/img/weighing-scale.png" height="20px" />&nbsp;40</h6> 
-						</div>
-						<div class="col-md-3" *ngFor="let log of charityLogs.logs">
-								<h5><span style="border-bottom: 2px solid yellow;font-weight: bold">Delivery</span> <span class="w3-text-yellow"> Boy</span></h5>
-								<h6>
-									<img src="../../assets/img/scooter.png" height="20px" />&nbsp;&nbsp;{{log.charityStatus.deliveryBoyName}}
-									<br/>
-									<i class="fa fa-phone w3-text-yellow"></i>&nbsp;&nbsp;{{log.charityStatus.deliveryBoyMobile}}
-								</h6>
-						</div>
-						<div class="col-md-3">
-								<h6>Submit Your Review</h6>
-								<div class="form-group">
-									<img src="../../assets/img/starYellow.png" height="20px" />
-									<img src="../../assets/img/starYellow.png" height="20px" />
-									<img src="../../assets/img/starYellow.png" height="20px" />
-									<img src="../../assets/img/starYellow.png" height="20px" />
-									<img src="../../assets/img/starBlank.png" height="20px" />
-								</div>
-								<div class="form-group">
-									<label>Review</label>
-									<textarea class="form-control"></textarea>
-								</div>
-								<div class="form-group">
-									<button class="w3-btn w3-small w3-green w3-round" >Submit</button>
-								</div>
-						</div>
-					</div>
-				</div>
-				<!-- End Of Assignment Log -->
+										
 
 		  </div>
 </div>

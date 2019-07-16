@@ -27,6 +27,8 @@ import { ProfileEditableComponent } from './profile-editable/profile-editable.co
 import { CharitySliderComponent } from './charity-slider/charity-slider.component';
 import { RestaurantSliderComponent } from './restaurant-slider/restaurant-slider.component';
 import { RestaurantLogsComponent } from './restaurant-logs/restaurant-logs.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+
 
 @NgModule({
   declarations: [
@@ -55,7 +57,8 @@ import { RestaurantLogsComponent } from './restaurant-logs/restaurant-logs.compo
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [
     LoginService,

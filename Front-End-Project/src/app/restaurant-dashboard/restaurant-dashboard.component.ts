@@ -7,7 +7,9 @@ import { DonationService } from '../donation.service';
   styleUrls: ['./restaurant-dashboard.component.css']
 })
 export class RestaurantDashboardComponent implements OnInit {
-
+  p: Number = 1;
+  count: Number = 5;
+  
   constructor(private service: DonationService) { }
   username: string;
   restaurant: any;
@@ -27,12 +29,10 @@ export class RestaurantDashboardComponent implements OnInit {
       this.restaurant = data;
       console.log(this.restaurant);
     })
-
     this.service.getRestaurantLogs(this.username).subscribe(data => {
       console.log(data)
       this.restaurantLogs = data;
     })
-  
   }
 
   openDonationModal(){
